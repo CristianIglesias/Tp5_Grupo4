@@ -22,10 +22,23 @@ import javax.swing.JButton;
 public class Programa extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-
-
+	private JTextField txtNombre;
+	
+	//Controles declarados en la clase.
+	private JMenuBar menuBar ;
+	private JMenu mnNewMenu;
+	private JMenuItem mntmNewMenuItem;
+	private JMenuItem mntmNewMenuItem_1;
+	private JPanel Agregar;
+	private JLabel LbliD;
+	private JLabel lbl_ID;
+	private JLabel lblNombre;
+	private JLabel lblGenero ;
+	private JTextField txtNom;
+	
 	public Programa() {
+		
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		
@@ -51,51 +64,36 @@ public class Programa extends JFrame {
 		contentPane.add(Agregar);
 		Agregar.setLayout(null);
 		
-		JLabel lblNeLabel = new JLabel("Ne label");
-		lblNeLabel.setBounds(21, 20, 86, 23);
-		Agregar.add(lblNeLabel);
+		JLabel Lbl_ID_estatico = new JLabel("ID");
+		Lbl_ID_estatico.setBounds(21, 20, 86, 23);
+		Agregar.add(Lbl_ID_estatico);
 		
-		JLabel lblNeLabel_1 = new JLabel("Ne label");
-		lblNeLabel_1.setBounds(145, 17, 62, 29);
-		Agregar.add(lblNeLabel_1);
+		JLabel lbl_ID = new JLabel();///asdadasdadadasdadasdasd
+		lbl_ID.setBounds(145, 17, 62, 29);
+		Agregar.add(lbl_ID);
 		
-		JLabel lblNeLabel_2 = new JLabel("Ne label");
-		lblNeLabel_2.setBounds(21, 57, 86, 23);
-		Agregar.add(lblNeLabel_2);
+		JLabel lblNombre = new JLabel("Nombre");
+		lblNombre.setBounds(21, 57, 86, 23);
+		Agregar.add(lblNombre);
 		
-		JLabel lblNeLabel_3 = new JLabel("Ne label");
-		lblNeLabel_3.setBounds(22, 93, 86, 23);
-		Agregar.add(lblNeLabel_3);
+		JLabel lblGenero = new JLabel("Genero");
+		lblGenero.setBounds(22, 93, 86, 23);
+		Agregar.add(lblGenero);
 		
-		textField = new JTextField();
-		textField.setBounds(125, 56, 86, 20);
-		Agregar.add(textField);
-		textField.setColumns(10);
+		txtNombre = new JTextField();
+		txtNombre.setText("de Pelicula\r\n\r\n");
+		txtNombre.setBounds(125, 56, 86, 20);
+		Agregar.add(txtNombre);
+		txtNombre.setColumns(10);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(101, 91, 120, 20);
-		Agregar.add(comboBox);
+		JComboBox comboBoxGenero = new JComboBox();
+		comboBoxGenero.setToolTipText("");
+		comboBoxGenero.setBounds(101, 91, 120, 20);
+		Agregar.add(comboBoxGenero);
 		
-		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setBounds(25, 123, 89, 23);
-		Agregar.add(btnNewButton);
+		JButton btnAceptar = new JButton("Aceptar");
+		btnAceptar.setBounds(25, 123, 89, 23);
+		Agregar.add(btnAceptar);
 	}
 
-	private static void addPopup(Component component, final JPopupMenu popup) {
-		component.addMouseListener(new MouseAdapter() {
-			public void mousePressed(MouseEvent e) {
-				if (e.isPopupTrigger()) {
-					showMenu(e);
-				}
-			}
-			public void mouseReleased(MouseEvent e) {
-				if (e.isPopupTrigger()) {
-					showMenu(e);
-				}
-			}
-			private void showMenu(MouseEvent e) {
-				popup.show(e.getComponent(), e.getX(), e.getY());
-			}
-		});
-	}
 }

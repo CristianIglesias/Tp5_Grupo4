@@ -2,7 +2,7 @@ package dominio;
 
 public class Peliculas {
 
-	private static int Id;
+	private static int Id=0;
 
 	private String nombre;
 
@@ -15,7 +15,14 @@ public class Peliculas {
 		this.genero = genero;
 	}
 
-	
+	public Peliculas() {
+		super();
+		Id++; // Llegado el momento se va a leer desde el archivo
+		this.nombre="";
+		
+		
+		
+	}
 	
 	
 

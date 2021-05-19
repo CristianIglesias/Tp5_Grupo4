@@ -1,13 +1,25 @@
 package dominio;
 
+import java.awt.EventQueue;
+
 public class Principal {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		Programa ventana1 = new Programa();
-		
-		
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Programa frame = new Programa();
+					frame.setVisible(true);
+					Peliculas peli = new Peliculas();
+					
+					
+					
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 	}
 
 }
