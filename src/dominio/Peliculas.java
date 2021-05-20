@@ -2,8 +2,9 @@ package dominio;
 
 public class Peliculas {
 
-	private static int Id;
-
+	public static int ProximoID;
+	
+	private int ID;
 	private String nombre;
 
 	private Categorias genero;
@@ -11,20 +12,22 @@ public class Peliculas {
 	//Constructor
 	public Peliculas(String nombre, Categorias genero) {
 		super();
+		this.ID=ProximoID;
 		this.nombre = nombre;
 		this.genero = genero;
+		ProximoID++;
 	}
 
 	
 	
 	
 
-	public static int getId() {
-		return Id;
+	public int getId() {
+		return ID;
 	}
 
-	public static void setId(int id) {
-		Id = id;
+	public void setId(int id) {
+		ID = id;
 	}
 
 	public String getNombre() {
