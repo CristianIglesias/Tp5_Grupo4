@@ -2,9 +2,11 @@ package dominio;
 
 public class Peliculas {
 
+
 	public static int ProximoID;
 	
 	private int ID;
+
 	private String nombre;
 
 	private Categorias genero;
@@ -18,7 +20,14 @@ public class Peliculas {
 		ProximoID++;
 	}
 
-	
+	public Peliculas() {
+		super();
+		//Id++; // Llegado el momento se va a leer desde el archivo
+		this.nombre="";
+		
+		
+		
+	}
 	
 	
 

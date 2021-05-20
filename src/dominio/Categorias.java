@@ -6,9 +6,7 @@ public class Categorias {
 	private static int id; //No se hasta que punto hace falta que esto esté, pero puede ser bueno.
 	
 	public Categorias(String nombre) {
-		super();
 		Nombre = nombre;
-		
 		/*Generos a cargar en combobox:
 		Terror
 		Accion
@@ -16,6 +14,12 @@ public class Categorias {
 		Romantica		
 		*/
 	}
+	
+	public Categorias()
+	{
+		Nombre="";
+	}
+	
 	
 	@Override
 	public String toString() {
