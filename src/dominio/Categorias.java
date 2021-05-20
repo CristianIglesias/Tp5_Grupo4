@@ -23,7 +23,7 @@ public class Categorias {
 	
 	@Override
 	public String toString() {
-		return "Categorias [Nombre=" + Nombre + "]";
+		return Nombre;
 	}
 	public String getNombre() {
 		return Nombre;

@@ -1,9 +1,9 @@
 package dominio;
 
-public class Peliculas {
+public class Peliculas implements Comparable<Peliculas> {
 
 
-	public static int ProximoID;
+	public static int ProximoID=1;
 	
 	private int ID;
 
@@ -13,7 +13,6 @@ public class Peliculas {
 	
 	//Constructor
 	public Peliculas(String nombre, Categorias genero) {
-		super();
 		this.ID=ProximoID;
 		this.nombre = nombre;
 		this.genero = genero;
@@ -21,12 +20,8 @@ public class Peliculas {
 	}
 
 	public Peliculas() {
-		super();
-		//Id++; // Llegado el momento se va a leer desde el archivo
+		
 		this.nombre="";
-		
-		
-		
 	}
 	
 	
@@ -42,7 +37,6 @@ public class Peliculas {
 	public String getNombre() {
 		return nombre;
 	}
-
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
@@ -57,7 +51,19 @@ public class Peliculas {
 
 	@Override
 	public String toString() {
-		return "Peliculas [nombre=" + nombre + ", genero=" + genero + "]";
+		return nombre;
+	}
+
+	@Override
+	public int compareTo(Peliculas pelicula) {
+		if(nombre.toLowerCase().compareTo(pelicula.nombre.toLowerCase())==0) {
+			return 0;
+		}
+		else if(nombre.toLowerCase().compareTo(pelicula.nombre.toLowerCase())<0) {
+			return -1;
+		}
+		else 
+			return 1;
 	}
 
 }
