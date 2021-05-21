@@ -11,7 +11,6 @@ public class Peliculas implements Comparable<Peliculas> {
 
 	private Categorias genero;
 	
-	//Constructor
 	public Peliculas(String nombre, Categorias genero) {
 		this.ID=ProximoID;
 		this.nombre = nombre;
@@ -24,8 +23,6 @@ public class Peliculas implements Comparable<Peliculas> {
 		this.nombre="";
 	}
 	
-	
-
 	public int getId() {
 		return ID;
 	}
@@ -37,6 +34,7 @@ public class Peliculas implements Comparable<Peliculas> {
 	public String getNombre() {
 		return nombre;
 	}
+	
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}

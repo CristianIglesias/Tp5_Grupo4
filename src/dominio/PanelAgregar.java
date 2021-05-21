@@ -16,7 +16,6 @@ public class PanelAgregar extends JPanel {
 	private DefaultListModel<Peliculas> dlModel;
 	private JComboBox<Categorias> comboBox;
 	private JButton btnAceptar;
-	private ComboBoxModel<Categorias> dlmComboBox;
 
 	public PanelAgregar() {
 		setLayout(null);
@@ -45,13 +44,10 @@ public class PanelAgregar extends JPanel {
 		comboBox = new JComboBox<Categorias>();
 		comboBox.setToolTipText("");
 		comboBox.setBounds(137, 126, 125, 20);
-		
-		//comboBox.addItem(new Categorias(-1,"Seleccione Item"));
 		comboBox.addItem(new Categorias("Terror"));
 		comboBox.addItem(new Categorias("Accion"));
 		comboBox.addItem(new Categorias("Suspenso"));
 		comboBox.addItem(new Categorias("Romantica"));
-		//comboBox.setModel(dlmComboBox);
 		comboBox.setSelectedIndex(-1);
 		add(comboBox);
 		
